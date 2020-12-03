@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="push" [(opened)]="opened">SideNav</mat-sidenav>
+  <!-- mode= over, side -->
+  <mat-sidenav-content>
+    <button (click)="opened=!opened">Toggle slider</button>
+    <button (click)="sidenav.open()">open</button>
+    <button (click)="sidenav.close()">close</button>
+    <button (click)="sidenav.toggle()">toggle</button>
+    <!-- <app-dino-jump></app-dino-jump> -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<app-footer></app-footer>
+<!-- <app-register></app-register> -->
